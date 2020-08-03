@@ -1,0 +1,11 @@
+{
+    "categories": [
+        { "value": "business", "label": "Negocios", "icon": "fas fa-briefcase" },
+        { "value": "entertainment", "label": "Entretenimiento", "icon": "fas fa-glasses" },
+        { "value": "general", "label": "General", "icon": "fas fa-globe" },
+        { "value": "health", "label": "Salud", "icon": "fas fa-heartbeat" },
+        { "value": "science", "label": "Ciencia", "icon": "fas fa-vials" },
+        { "value": "sports", "label": "Deportes", "icon": "far fa-futbol" },
+        { "value": "technology", "label": "Tecnología", "icon": "fas fa-microchip" }
+    ]
+}

@@ -1,0 +1,70 @@
+:root 
+{
+    // base
+    --bgColor: #f2f2f2;
+
+    // fonts
+    --headings: 'Abril Fatface', cursive;
+    --text: 'Montserrat', sans-serif;
+
+    // colors
+    --primaryColor: #14213d;
+    --secondary: #fca311;
+    --gray: #e5e5e5;
+    --white: #ffffff;
+    --black: #424242;
+    --blackAlt: #2F323A;
+    --linkColor: #0095ff;
+}
+
+*, *::after, *::before 
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html 
+{
+    font-size: 62.5%;
+}
+
+body 
+{
+    background-color: var(--bgColor);
+    color: var(--negro);
+    font-size: 1.6rem;
+    font-family: var(--text);
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+p 
+{
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+    font-family: var(--headings);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.wrapper 
+{
+    max-width: 1440px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+img 
+{
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+@import 'header';
+@import 'mainSite';
+@import 'footer';

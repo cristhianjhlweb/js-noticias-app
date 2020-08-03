@@ -1,0 +1,25 @@
+.site-header
+{
+    background-color: var(--white);
+    padding: 1.5rem 0;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .wrapper
+    {
+        .main-menu
+        {
+            h1
+            {
+                text-transform: capitalize;
+                font-size: 2rem;
+                letter-spacing: 0.2rem;
+                color: var(--primaryColor)
+            }
+        }
+    }
+}

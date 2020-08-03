@@ -1,0 +1,152 @@
+.site-main
+{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.categories-menu
+{
+    margin: 0 0 2rem 0;
+    form 
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        .form-group
+        {
+            input[type="radio"] {
+                display: none;
+                &:checked
+                {
+                    & ~ label {
+                        background: var(--primaryColor);
+                    }
+                }
+            }
+            label 
+            {
+                cursor: pointer;
+                display: block;
+                background: var(--secondary);
+                padding: 1.5rem 2.5rem;
+                color: var(--white);
+                font-size: 1.3rem;
+                font-weight: 400;
+                user-select: none;
+                .icon 
+                {
+                    margin-right: 1rem;
+                }
+            }
+        }
+        @media screen and (min-width: 768px)
+        {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            .form-group
+            {
+                label {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+.news-container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    .news-card
+    {
+        background-color: var(--white);
+        .news-image
+        {
+            width: 100%;
+            height: 30rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                object-fit: contain;
+            }
+        }
+        .news-content
+        {
+            padding: 2rem;
+            .header-content
+            {
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 0.2rem solid rgba(0, 0, 0, 0.09);
+                .source 
+                {
+                    font-weight: bold;
+                    span { font-weight: 300; }                    
+                }
+                .author 
+                {
+                    font-weight: bold;
+                    span { font-weight: 300; }                    
+                }
+            }
+            .title
+            {
+                font-size: 2.4rem;
+                letter-spacing: 0.1rem;
+                margin-bottom: 2rem;
+            }
+            .description
+            {
+                color: var(--blackAlt);
+                margin-bottom: 2rem;
+            }
+            .article-link
+            {
+                color: var(--linkColor);
+                text-decoration: none;
+            }
+        }
+    }
+    @media screen and (min-width: 768px) 
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1020px)
+{
+    .site-container
+    {
+        display: flex;
+        justify-content: space-between;
+        .categories-menu
+        {
+            width: 18%;
+            transition: all 0.8s ease-in;
+            form 
+            {
+                display: block;
+                .form-group
+                {
+                    margin-bottom: 1.5rem;
+                    &:last-child { margin-bottom: 0; }
+                }
+            }
+            &.menu-fixed
+            {
+                position: fixed;
+                top: 12%;
+                left: 2%;
+                transition: all 0.8s ease-out;
+            }
+        }
+        .news-container
+        {
+            width: 80%;
+            margin: 0 0 0 auto;
+        }
+    }
+}
