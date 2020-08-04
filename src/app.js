@@ -1,9 +1,16 @@
-import { CategoryList } from './components/CategoryList'
+import { CategoryList, CountryList } from './components/CategoryList'
 import { ArticlesList } from './components/ArticlesList'
+import { listChange, changeCountry, filters } from './components/EventsChange'
+
 
 import './sass/main.scss'
 
 document.addEventListener("DOMContentLoaded", () => {
-  CategoryList( document.querySelector("#category-form") )
-	ArticlesList( document.querySelector("#news-container") )
+
+  filters
+  CategoryList()
+  CountryList()
+  ArticlesList('sports', 've')
+  listChange()
+  changeCountry()
 })

@@ -1,4 +1,4 @@
-# Cristhian Hernández - cristhianjhl.com | Aplicación de Noticias con JavaScript
+# cristhianjhl.com | Aplicación de Noticias con JavaScript
 
 ## Bienvenido! 👋
 

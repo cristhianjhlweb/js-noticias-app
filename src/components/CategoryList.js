@@ -9,15 +9,36 @@ const categories = [
       { "value": "technology", "label": "Tecnología", "icon": "fas fa-microchip" }
 ]
 
-export const CategoryList = (container) => {
+
+const countrys = [
+  { "value": "ve", "label": "Venezuela" },
+  { "value": "ar", "label": "Argentina" },
+  { "value": "br", "label": "Brasil" },
+  { "value": "co", "label": "Colombia" },
+  { "value": "cu", "label": "Cuba" },
+  { "value": "ch", "label": "China" },
+  { "value": "jp", "label": "Japan" },
+  { "value": "mx", "label": "Mexico" },
+  { "value": "us", "label": "Estados Unidos" },
+  { "value": "gb", "label": "Reino Unido" },
+]
+
+export const CategoryList = () => {
   categories.forEach((cat) => {
     const listCategory = `
-			<div class="form-group">
-					<input type="radio" name="category" id="${cat.value}" value="${cat.value}">
-					<label for="${cat.value}"><i class="icon ${cat.icon}"></i> ${cat.label}</label>
-			</div>
+      <option value="${cat.value}">${cat.label}</option>
     `
-    const template = container.innerHTML += listCategory 
+    const template = document.querySelector("#categoryList").innerHTML += listCategory 
+		return template
+  })
+}
+
+export const CountryList = () => {
+  countrys.forEach((ct) => {
+    const listCountry = `
+      <option value="${ct.value}">${ct.label}</option>
+    `
+    const template = document.querySelector("#countryList").innerHTML += listCountry 
 		return template
   })
 }

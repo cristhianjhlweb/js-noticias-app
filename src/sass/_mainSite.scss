@@ -11,32 +11,29 @@
     {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
+        gap: 2rem;
+        background: var(--primaryColor);
+        padding: 1.2rem;
         .form-group
         {
-            input[type="radio"] {
-                display: none;
-                &:checked
-                {
-                    & ~ label {
-                        background: var(--primaryColor);
-                    }
-                }
-            }
-            label 
-            {
-                cursor: pointer;
-                display: block;
-                background: var(--secondary);
-                padding: 1.5rem 2.5rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            label {
+                margin-bottom: 1rem;
                 color: var(--white);
-                font-size: 1.3rem;
                 font-weight: 400;
-                user-select: none;
-                .icon 
-                {
-                    margin-right: 1rem;
-                }
+                font-size: 1.6rem;
+            }
+            select
+            {
+                -webkit-appearance: none;
+                border: var(--gray);
+                padding: 1.2rem ;
+                background-color: var(--white);
+                color: var(--negro);
+                text-align: center;
+                cursor: pointer;
             }
         }
         @media screen and (min-width: 768px)
@@ -108,6 +105,20 @@
                 color: var(--linkColor);
                 text-decoration: none;
             }
+        }
+
+    }
+    &:empty {
+        .news-card{    
+            height: 500px;
+            width: 600px;
+            background: radial-gradient(circle 20px, #ccc 100%, transparent),
+            linear-gradient(#ccc, #ccc),
+            linear-gradient(#ccc, #ccc),
+            linear-gradient(#f1f1f1, #f1f1f1);
+            background-size: 48px 48px, 190px 40px, 190px 20px, 100% 100%;
+            background-position: 50% 24px, 15px 140px, 15px 200px, 0 0;
+            background-repeat: no-repeat;
         }
     }
     @media screen and (min-width: 768px) 

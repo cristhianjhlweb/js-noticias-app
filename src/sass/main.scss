@@ -65,6 +65,22 @@ img
     margin: 0;
 }
 
+.alert
+{
+    margin: 0 auto;
+    &.error
+    {
+        background-color: transparent;
+        width: 100%;
+        color: #d00000;
+        font-size: 2.2rem;
+        padding: 2rem;
+        text-align: center;
+    }
+    &.d-block{display: block;}
+    &.d-none{display: none;}
+}
+
 @import 'header';
 @import 'mainSite';
 @import 'footer';
